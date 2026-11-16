@@ -78,7 +78,7 @@ void draw(){
   
   if(viewscreen) {
     //begin attitude control
-    if(!attitudeControl) beginDrift();
+    //if(!attitudeControl) beginDrift();
     
     //starfield simulation
     for(int i = 0; i < stars. length; i++){
@@ -97,9 +97,8 @@ void draw(){
     holodeck.display();
   
     //end of attitude control
-    if(!attitudeControl) endDrift();
-  }
-  else {
+    //if(!attitudeControl) endDrift();
+  } else {
     noSignal();
   }
   
@@ -129,7 +128,7 @@ void init(){
     println(item);
   }
   //engineering adjustments
-  DeregulateDilithuimColumator();
+  //DeregulateDilithuimColumator();
   //location
   earth = new Planet(2*width/3, height/4, 50);
   moon = new Planet(2.1*width/3, height/3, 10);
@@ -151,6 +150,7 @@ void dropOutOfWarp(){
   location = "sector " + int(x) + "-" + int(y);
 }
 
+/*
 /////////////////////////////////////////////////////
 ///////////engineering working party/////////////////
 /////////////////////////////////////////////////////
@@ -172,7 +172,7 @@ void DeregulateDilithuimColumator(){
 }
 /////////////////////////////////////////////////////
 //////////end engineering working party//////////////
-/////////////////////////////////////////////////////
+///////////////////////////////////////////////////// */
 
 void noSignal(){
   noStroke();
